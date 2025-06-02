@@ -25,19 +25,17 @@ const Navbar = () => {
   return (
     <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${
       isScrolled 
-        ? 'bg-white/95 backdrop-blur-md shadow-lg border-b border-gray-200/50' 
-        : 'bg-white/10 backdrop-blur-sm'
+        ? 'bg-white/95 backdrop-blur-md shadow-lg border-b border-[#FF7043]/20' 
+        : 'bg-[#FAF5F0]/90 backdrop-blur-sm'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex items-center space-x-2 group">
-            <div className="p-2 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg shadow-lg group-hover:shadow-cyan-500/25 transition-all duration-300 group-hover:scale-110">
+            <div className="p-2 bg-gradient-to-r from-[#FF7043] to-[#FFAD91] rounded-lg shadow-lg group-hover:shadow-[#FF7043]/25 transition-all duration-300 group-hover:scale-110">
               <Shield className="h-6 w-6 text-white" />
             </div>
-            <span className={`text-xl font-bold transition-colors duration-300 ${
-              isScrolled ? 'text-gray-900' : 'text-white'
-            }`}>
+            <span className="text-xl font-bold text-black">
               GCFI
             </span>
           </div>
@@ -48,14 +46,10 @@ const Navbar = () => {
               <a
                 key={item.label}
                 href={item.href}
-                className={`relative font-medium transition-all duration-300 hover:scale-105 group ${
-                  isScrolled 
-                    ? 'text-gray-700 hover:text-cyan-600' 
-                    : 'text-white/90 hover:text-cyan-400'
-                }`}
+                className="relative font-medium transition-all duration-300 hover:scale-105 group text-black hover:text-[#FF7043]"
               >
                 {item.label}
-                <span className="absolute inset-x-0 bottom-0 h-0.5 bg-gradient-to-r from-cyan-500 to-blue-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
+                <span className="absolute inset-x-0 bottom-0 h-0.5 bg-gradient-to-r from-[#FF7043] to-[#FFAD91] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
               </a>
             ))}
           </div>
@@ -64,11 +58,7 @@ const Navbar = () => {
           <div className="md:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className={`p-2 rounded-lg transition-all duration-300 hover:scale-110 ${
-                isScrolled 
-                  ? 'text-gray-700 hover:text-cyan-600 hover:bg-cyan-50' 
-                  : 'text-white hover:text-cyan-400 hover:bg-white/10'
-              }`}
+              className="p-2 rounded-lg transition-all duration-300 hover:scale-110 text-black hover:text-[#FF7043] hover:bg-[#FF7043]/10"
             >
               {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
@@ -77,13 +67,13 @@ const Navbar = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden bg-white/95 backdrop-blur-md border-t border-gray-200/50 animate-fade-in">
+          <div className="md:hidden bg-white/95 backdrop-blur-md border-t border-[#FF7043]/20 animate-fade-in">
             <div className="px-2 pt-2 pb-3 space-y-1">
               {navItems.map((item) => (
                 <a
                   key={item.label}
                   href={item.href}
-                  className="block px-4 py-3 text-gray-700 hover:text-cyan-600 hover:bg-cyan-50 transition-all duration-300 rounded-lg font-medium"
+                  className="block px-4 py-3 text-black hover:text-[#FF7043] hover:bg-[#FF7043]/10 transition-all duration-300 rounded-lg font-medium"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.label}
