@@ -71,22 +71,22 @@ const HeroSection = () => {
 
             {/* Key Features with Animation */}
             <div className="grid sm:grid-cols-3 gap-6">
-              <div className="flex items-center space-x-3 p-3 bg-white/5 rounded-lg backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300 animate-fade-in" style={{animationDelay: '0.2s'}}>
+              <div className="flex items-center space-x-3 p-3 bg-white/5 rounded-lg backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300 animate-fade-in" style={{ animationDelay: '0.2s' }}>
                 <Shield className="h-6 w-6 text-cyan-400" />
                 <span className="text-sm font-medium text-gray-200">ISO Certified</span>
               </div>
-              <div className="flex items-center space-x-3 p-3 bg-white/5 rounded-lg backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300 animate-fade-in" style={{animationDelay: '0.4s'}}>
+              <div className="flex items-center space-x-3 p-3 bg-white/5 rounded-lg backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300 animate-fade-in" style={{ animationDelay: '0.4s' }}>
                 <Zap className="h-6 w-6 text-yellow-400" />
                 <span className="text-sm font-medium text-gray-200">24/7 Response</span>
               </div>
-              <div className="flex items-center space-x-3 p-3 bg-white/5 rounded-lg backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300 animate-fade-in" style={{animationDelay: '0.6s'}}>
+              <div className="flex items-center space-x-3 p-3 bg-white/5 rounded-lg backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300 animate-fade-in" style={{ animationDelay: '0.6s' }}>
                 <Users className="h-6 w-6 text-purple-400" />
                 <span className="text-sm font-medium text-gray-200">Expert Team</span>
               </div>
             </div>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 animate-fade-in" style={{animationDelay: '0.8s'}}>
+            <div className="flex flex-col sm:flex-row gap-4 animate-fade-in" style={{ animationDelay: '0.8s' }}>
               <Button 
                 size="lg" 
                 className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-4 text-lg font-semibold transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-cyan-500/25"
@@ -107,7 +107,7 @@ const HeroSection = () => {
           </div>
 
           {/* Enhanced Hero Visual */}
-          <div className="relative animate-fade-in" style={{animationDelay: '1s'}}>
+          <div className="relative animate-fade-in" style={{ animationDelay: '1s' }}>
             <div className="relative bg-gradient-to-br from-cyan-500/20 via-purple-500/20 to-blue-500/20 rounded-3xl p-8 backdrop-blur-sm border border-white/20 shadow-2xl">
               {/* Cyber Security Dashboard Mockup */}
               <div className="space-y-6">
@@ -146,12 +146,12 @@ const HeroSection = () => {
                       <div className="text-xs text-gray-400">Success Rate</div>
                     </div>
                     <div>
-                      <div className="text-2xl font-bold text-white">< 2min</div>
+                      <div className="text-2xl font-bold text-white">&lt; 2min</div>
                       <div className="text-xs text-gray-400">Response Time</div>
                     </div>
                   </div>
                   <div className="mt-3 h-2 bg-gray-700 rounded">
-                    <div className="h-2 bg-gradient-to-r from-green-400 to-cyan-400 rounded animate-pulse" style={{width: '98.7%'}}></div>
+                    <div className="h-2 bg-gradient-to-r from-green-400 to-cyan-400 rounded animate-pulse" style={{ width: '98.7%' }}></div>
                   </div>
                 </div>
 
