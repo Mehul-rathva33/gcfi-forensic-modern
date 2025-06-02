@@ -55,7 +55,7 @@ const ContactSection = () => {
     {
       icon: Mail,
       title: 'Email',
-      details: ['info@gcfi.com', 'support@gcfi.com'],
+      details: ['vs@cdfii.in', 'support@gcfi.com'],
       color: 'bg-cyan-500'
     }
   ];
