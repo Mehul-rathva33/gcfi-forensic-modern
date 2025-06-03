@@ -1,3 +1,4 @@
+
 import React, { useEffect, useRef } from 'react';
 
 interface Particle {
@@ -32,14 +33,14 @@ const ParticleNetwork = () => {
 
     const createParticles = () => {
       const particles: Particle[] = [];
-      const particleCount = Math.floor((canvas.width * canvas.height) / 15000);
+      const particleCount = Math.floor((canvas.width * canvas.height) / 12000);
       
       for (let i = 0; i < particleCount; i++) {
         particles.push({
           x: Math.random() * canvas.width,
           y: Math.random() * canvas.height,
-          vx: (Math.random() - 0.5) * 0.5,
-          vy: (Math.random() - 0.5) * 0.5,
+          vx: (Math.random() - 0.5) * 0.3,
+          vy: (Math.random() - 0.5) * 0.3,
           radius: Math.random() * 2 + 1
         });
       }
@@ -52,20 +53,20 @@ const ParticleNetwork = () => {
       ctx.arc(particle.x, particle.y, particle.radius, 0, Math.PI * 2);
       ctx.fillStyle = '#F45B2A';
       ctx.shadowColor = '#F45B2A';
-      ctx.shadowBlur = 10;
+      ctx.shadowBlur = 8;
       ctx.fill();
       ctx.shadowBlur = 0;
     };
 
     const drawConnection = (p1: Particle, p2: Particle, distance: number, maxDistance: number) => {
-      const opacity = mouseRef.current.hover ? 0.6 : 0.3;
-      const alpha = (1 - distance / maxDistance) * opacity;
+      const baseOpacity = mouseRef.current.hover ? 0.4 : 0.3;
+      const alpha = (1 - distance / maxDistance) * baseOpacity;
       
       ctx.beginPath();
       ctx.moveTo(p1.x, p1.y);
       ctx.lineTo(p2.x, p2.y);
       ctx.strokeStyle = `rgba(244, 91, 42, ${alpha})`;
-      ctx.lineWidth = mouseRef.current.hover ? 2 : 1;
+      ctx.lineWidth = mouseRef.current.hover ? 1.5 : 1;
       ctx.stroke();
     };
 
@@ -94,7 +95,7 @@ const ParticleNetwork = () => {
       updateParticles();
       
       const particles = particlesRef.current;
-      const maxDistance = mouseRef.current.hover ? 150 : 100;
+      const maxDistance = mouseRef.current.hover ? 140 : 100;
 
       // Draw connections
       for (let i = 0; i < particles.length; i++) {
@@ -108,7 +109,7 @@ const ParticleNetwork = () => {
           }
         }
 
-        // Connect to mouse if hovering
+        // Connect to mouse if hovering (grab mode)
         if (mouseRef.current.hover) {
           const dx = particles[i].x - mouseRef.current.x;
           const dy = particles[i].y - mouseRef.current.y;
@@ -118,7 +119,7 @@ const ParticleNetwork = () => {
             ctx.beginPath();
             ctx.moveTo(particles[i].x, particles[i].y);
             ctx.lineTo(mouseRef.current.x, mouseRef.current.y);
-            ctx.strokeStyle = `rgba(244, 91, 42, ${(1 - distance / 120) * 0.8})`;
+            ctx.strokeStyle = `rgba(244, 91, 42, ${(1 - distance / 120) * 0.6})`;
             ctx.lineWidth = 2;
             ctx.stroke();
           }
