@@ -4,23 +4,23 @@ import { Shield, Phone, Mail, MapPin, Linkedin, Twitter } from 'lucide-react';
 
 const Footer = () => {
   return (
-    <footer className="bg-gradient-to-b from-[#FFF8F6] to-[#FAF5F0] border-t border-[#FF7043]/20">
+    <footer className="bg-gradient-to-b from-[#F4F4F4] to-[#F7F7F7] border-t border-[#F45B2A]/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid md:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="col-span-1">
             <div className="flex items-center space-x-2 mb-4">
-              <Shield className="h-8 w-8 text-[#FF7043]" />
-              <span className="text-xl font-bold text-black">GCFI</span>
+              <Shield className="h-8 w-8 text-[#F45B2A]" />
+              <span className="text-xl font-bold text-[#2B2B2B]">GCFI</span>
             </div>
-            <p className="text-gray-600 mb-4">
+            <p className="text-[#6E6E6E] mb-4">
               Leading provider of advanced cyber forensic services, protecting digital assets worldwide.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-500 hover:text-[#FF7043] transition-colors">
+              <a href="#" className="text-[#6E6E6E] hover:text-[#F45B2A] transition-colors">
                 <Linkedin className="h-5 w-5" />
               </a>
-              <a href="#" className="text-gray-500 hover:text-[#FF7043] transition-colors">
+              <a href="#" className="text-[#6E6E6E] hover:text-[#F45B2A] transition-colors">
                 <Twitter className="h-5 w-5" />
               </a>
             </div>
@@ -28,34 +28,34 @@ const Footer = () => {
 
           {/* Services */}
           <div className="col-span-1">
-            <h3 className="text-lg font-semibold mb-4 text-black">Services</h3>
-            <ul className="space-y-2 text-gray-600">
-              <li><a href="#" className="hover:text-[#FF7043] transition-colors">Computer Forensics</a></li>
-              <li><a href="#" className="hover:text-[#FF7043] transition-colors">Network Forensics</a></li>
-              <li><a href="#" className="hover:text-[#FF7043] transition-colors">Mobile Forensics</a></li>
-              <li><a href="#" className="hover:text-[#FF7043] transition-colors">Data Recovery</a></li>
-              <li><a href="#" className="hover:text-[#FF7043] transition-colors">Incident Response</a></li>
+            <h3 className="text-lg font-semibold mb-4 text-[#2B2B2B]">Services</h3>
+            <ul className="space-y-2 text-[#6E6E6E]">
+              <li><a href="#" className="hover:text-[#F45B2A] transition-colors">Computer Forensics</a></li>
+              <li><a href="#" className="hover:text-[#F45B2A] transition-colors">Network Forensics</a></li>
+              <li><a href="#" className="hover:text-[#F45B2A] transition-colors">Mobile Forensics</a></li>
+              <li><a href="#" className="hover:text-[#F45B2A] transition-colors">Data Recovery</a></li>
+              <li><a href="#" className="hover:text-[#F45B2A] transition-colors">Incident Response</a></li>
             </ul>
           </div>
 
           {/* Quick Links */}
           <div className="col-span-1">
-            <h3 className="text-lg font-semibold mb-4 text-black">Quick Links</h3>
-            <ul className="space-y-2 text-gray-600">
-              <li><a href="#home" className="hover:text-[#FF7043] transition-colors">Home</a></li>
-              <li><a href="#about" className="hover:text-[#FF7043] transition-colors">About Us</a></li>
-              <li><a href="#services" className="hover:text-[#FF7043] transition-colors">Services</a></li>
-              <li><a href="#certifications" className="hover:text-[#FF7043] transition-colors">Certifications</a></li>
-              <li><a href="#contact" className="hover:text-[#FF7043] transition-colors">Contact</a></li>
+            <h3 className="text-lg font-semibold mb-4 text-[#2B2B2B]">Quick Links</h3>
+            <ul className="space-y-2 text-[#6E6E6E]">
+              <li><a href="#home" className="hover:text-[#F45B2A] transition-colors">Home</a></li>
+              <li><a href="#about" className="hover:text-[#F45B2A] transition-colors">About Us</a></li>
+              <li><a href="#services" className="hover:text-[#F45B2A] transition-colors">Services</a></li>
+              <li><a href="#certifications" className="hover:text-[#F45B2A] transition-colors">Certifications</a></li>
+              <li><a href="#contact" className="hover:text-[#F45B2A] transition-colors">Contact</a></li>
             </ul>
           </div>
 
           {/* Contact Info */}
           <div className="col-span-1">
-            <h3 className="text-lg font-semibold mb-4 text-black">Contact Info</h3>
-            <div className="space-y-3 text-gray-600">
+            <h3 className="text-lg font-semibold mb-4 text-[#2B2B2B]">Contact Info</h3>
+            <div className="space-y-3 text-[#6E6E6E]">
               <div className="flex items-start space-x-2">
-                <MapPin className="h-5 w-5 text-[#FF7043] mt-0.5" />
+                <MapPin className="h-5 w-5 text-[#F45B2A] mt-0.5" />
                 <div>
                   <p>402 Onyx Business Center</p>
                   <p>Akshar Chowk, Muj Mahuda</p>
@@ -63,14 +63,14 @@ const Footer = () => {
                 </div>
               </div>
               <div className="flex items-center space-x-2">
-                <Phone className="h-5 w-5 text-[#FF7043]" />
+                <Phone className="h-5 w-5 text-[#F45B2A]" />
                 <div>
                   <p>+91 2654000744</p>
                   <p>+91 9825094090</p>
                 </div>
               </div>
               <div className="flex items-center space-x-2">
-                <Mail className="h-5 w-5 text-[#FF7043]" />
+                <Mail className="h-5 w-5 text-[#F45B2A]" />
                 <p>info@gcfi.com</p>
               </div>
             </div>
@@ -78,14 +78,14 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-[#FF7043]/20 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-gray-500 text-sm">
+        <div className="border-t border-[#F45B2A]/20 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+          <p className="text-[#6E6E6E] text-sm">
             © 2024 GCFI Cyber Forensics. All rights reserved.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
-            <a href="#" className="text-gray-500 hover:text-[#FF7043] text-sm transition-colors">Privacy Policy</a>
-            <a href="#" className="text-gray-500 hover:text-[#FF7043] text-sm transition-colors">Terms of Service</a>
-            <a href="#" className="text-gray-500 hover:text-[#FF7043] text-sm transition-colors">Cookie Policy</a>
+            <a href="#" className="text-[#6E6E6E] hover:text-[#F45B2A] text-sm transition-colors">Privacy Policy</a>
+            <a href="#" className="text-[#6E6E6E] hover:text-[#F45B2A] text-sm transition-colors">Terms of Service</a>
+            <a href="#" className="text-[#6E6E6E] hover:text-[#F45B2A] text-sm transition-colors">Cookie Policy</a>
           </div>
         </div>
       </div>
