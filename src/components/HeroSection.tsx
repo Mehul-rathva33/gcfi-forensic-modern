@@ -2,10 +2,14 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Shield, Lock, Search, Zap, Eye, Users } from 'lucide-react';
+import ParticleNetwork from './ParticleNetwork';
 
 const HeroSection = () => {
   return (
-    <section id="home" className="relative min-h-screen flex items-center bg-gradient-to-br from-[#F7F7F7] to-[#F4F4F4] overflow-hidden">
+    <section id="home" className="relative min-h-screen flex items-center overflow-hidden">
+      {/* Particle Network Background */}
+      <ParticleNetwork />
+
       {/* Animated Background Elements */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-20 left-20 animate-pulse">
@@ -23,22 +27,6 @@ const HeroSection = () => {
         <div className="absolute bottom-40 right-20 animate-bounce">
           <Eye className="h-14 w-14 text-green-600" />
         </div>
-      </div>
-
-      {/* Floating Particles Animation */}
-      <div className="absolute inset-0">
-        {[...Array(20)].map((_, i) => (
-          <div
-            key={i}
-            className="absolute w-2 h-2 bg-[#F45B2A] rounded-full opacity-20 animate-pulse"
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 3}s`,
-              animationDuration: `${2 + Math.random() * 2}s`
-            }}
-          />
-        ))}
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 z-10">

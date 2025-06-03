@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -205,7 +204,7 @@ const ContactSection = () => {
             ))}
 
             {/* WhatsApp Contact */}
-            <Card className="bg-gradient-to-r from-green-50 to-emerald-50 border-green-200 hover:shadow-xl transition-all duration-500 hover:-translate-y-1 animate-fade-in" style={{animationDelay: '0.4s'}}>
+            <Card className="bg-gradient-to-r from-green-50 to-emerald-50 border-green-200 hover:shadow-xl transition-all duration-500 hover:-translate-y-1 animate-fade-in glass-card" style={{animationDelay: '0.4s'}}>
               <CardContent className="p-6">
                 <div className="flex items-center space-x-4">
                   <div className="p-3 bg-green-500 rounded-xl shadow-lg">
@@ -228,7 +227,7 @@ const ContactSection = () => {
           </div>
         </div>
 
-        {/* Enhanced Map Section */}
+        {/* Enhanced Map Section with Real Google Maps */}
         <div className="mt-20">
           <Card className="overflow-hidden shadow-2xl border-0 glass-card animate-fade-in" style={{animationDelay: '0.6s'}}>
             <CardHeader className="bg-gradient-to-r from-[#F45B2A] to-[#FF7A4D] text-white">
@@ -238,49 +237,34 @@ const ContactSection = () => {
               </CardTitle>
             </CardHeader>
             <CardContent className="p-0 relative">
-              <div className="h-80 bg-gradient-to-br from-[#F7F7F7] via-[#F4F4F4] to-[#F7F7F7] flex items-center justify-center relative overflow-hidden">
-                {/* Animated Background */}
-                <div className="absolute inset-0 opacity-20">
-                  {[...Array(15)].map((_, i) => (
-                    <div
-                      key={i}
-                      className="absolute w-1 h-1 bg-[#F45B2A] rounded-full animate-pulse"
-                      style={{
-                        left: `${Math.random() * 100}%`,
-                        top: `${Math.random() * 100}%`,
-                        animationDelay: `${Math.random() * 2}s`,
-                        animationDuration: `${1 + Math.random()}s`
-                      }}
-                    />
-                  ))}
-                </div>
+              <div className="relative">
+                <iframe 
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29535.1904478422!2d73.13059617910156!3d22.28182280000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395fc797b627f2f9%3A0xfa37b61378bac3a8!2sViral%20Shah!5e0!3m2!1sen!2sin!4v1748927320673!5m2!1sen!2sin!3m3!1m2!1s0x395fc797b627f2f9%3A0xfa37b61378bac3a8!2sViral%20Shah!5e0!3m2!1sen!2sin!4v1748927320673!5m2!1sen!2sin" 
+                  width="100%" 
+                  height="450" 
+                  style={{ border: 0 }} 
+                  allowFullScreen 
+                  loading="lazy" 
+                  referrerPolicy="no-referrer-when-downgrade"
+                  className="w-full"
+                />
                 
-                <div className="text-center text-[#2B2B2B] z-10 space-y-4">
-                  <div className="inline-flex items-center justify-center w-20 h-20 bg-[#F45B2A]/20 rounded-full border-2 border-[#F45B2A] backdrop-blur-sm animate-pulse">
-                    <MapPin className="h-10 w-10 text-[#F45B2A]" />
-                  </div>
-                  <div>
-                    <p className="font-bold text-xl mb-2">Interactive Map Coming Soon</p>
-                    <p className="text-[#6E6E6E] mb-1">402 Onyx Business Center</p>
-                    <p className="text-[#6E6E6E] mb-4">Akshar Chowk, Muj Mahuda, Vadodara, Gujarat</p>
-                    <div className="flex flex-col sm:flex-row gap-3 justify-center">
+                {/* Overlay with address info */}
+                <div className="absolute top-4 left-4 glass-card p-4 rounded-lg shadow-lg max-w-xs">
+                  <div className="text-[#2B2B2B] space-y-2">
+                    <p className="font-bold text-lg">Gujarat Cyber Forensic & Investigations</p>
+                    <p className="text-[#6E6E6E] text-sm">402 Onyx Business Center</p>
+                    <p className="text-[#6E6E6E] text-sm">Akshar Chowk, Muj Mahuda</p>
+                    <p className="text-[#6E6E6E] text-sm">Vadodara, Gujarat</p>
+                    <div className="flex gap-2 mt-3">
                       <Button 
                         variant="outline" 
                         size="sm" 
-                        className="border-[#F45B2A] text-[#F45B2A] hover:bg-[#F45B2A] hover:text-white transform hover:scale-105 transition-all duration-300"
+                        className="border-[#F45B2A] text-[#F45B2A] hover:bg-[#F45B2A] hover:text-white transform hover:scale-105 transition-all duration-300 text-xs"
                         onClick={() => window.open('https://maps.google.com/?q=402+Onyx+Business+Center+Akshar+Chowk+Muj+Mahuda+Vadodara+Gujarat', '_blank')}
                       >
-                        <Navigation className="w-4 h-4 mr-2" />
-                        View on Google Maps
-                      </Button>
-                      <Button 
-                        variant="outline" 
-                        size="sm" 
-                        className="border-[#FF7A4D] text-[#FF7A4D] hover:bg-[#FF7A4D] hover:text-white transform hover:scale-105 transition-all duration-300"
-                        onClick={() => window.open('https://maps.google.com/?q=402+Onyx+Business+Center+Akshar+Chowk+Muj+Mahuda+Vadodara+Gujarat&mode=driving', '_blank')}
-                      >
-                        <MapPin className="w-4 h-4 mr-2" />
-                        Get Directions
+                        <Navigation className="w-3 h-3 mr-1" />
+                        Directions
                       </Button>
                     </div>
                   </div>

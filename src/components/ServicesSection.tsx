@@ -112,41 +112,41 @@ const ServicesSection = () => {
   ];
 
   return (
-    <section id="services" className="py-20 bg-gradient-to-b from-[#FAF5F0] to-[#FFF8F6]">
+    <section id="services" className="py-20 bg-gradient-to-b from-[#F4F4F4] to-[#F7F7F7]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">
-            Our <span className="bg-gradient-to-r from-[#FF7043] to-[#FFAD91] bg-clip-text text-transparent">Services</span>
+          <h2 className="text-4xl md:text-5xl font-bold text-[#2B2B2B] mb-4">
+            Our <span className="bg-gradient-to-r from-[#F45B2A] to-[#FF7A4D] bg-clip-text text-transparent">Services</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-[#6E6E6E] max-w-3xl mx-auto">
             Comprehensive cyber forensic and data recovery solutions tailored to protect and restore your digital assets.
           </p>
         </div>
 
         {/* Forensic Investigation Services */}
         <div className="mb-16">
-          <h3 className="text-3xl font-bold text-black mb-8 text-center">
+          <h3 className="text-3xl font-bold text-[#2B2B2B] mb-8 text-center">
             Forensic Investigation Services
           </h3>
           <Accordion type="single" collapsible className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {forensicServices.map((service, index) => (
               <AccordionItem key={index} value={`forensic-${index}`} className="border-0">
-                <Card className="group hover:shadow-2xl transition-all duration-500 border-0 bg-white/90 backdrop-blur-sm hover:border-[#FF7043]/20 hover:-translate-y-2 animate-fade-in h-full" style={{animationDelay: `${index * 0.1}s`}}>
+                <Card className="group hover:shadow-2xl transition-all duration-500 border-0 glass-card backdrop-blur-md bg-white/80 hover:bg-white/90 hover:border-[#F45B2A]/20 hover:-translate-y-2 animate-fade-in h-full" style={{animationDelay: `${index * 0.1}s`}}>
                   <AccordionTrigger className="hover:no-underline p-0 border-0">
                     <CardHeader className="text-center relative overflow-hidden w-full">
                       <div className={`mx-auto mb-4 p-4 rounded-2xl bg-gradient-to-br ${service.gradient} shadow-lg group-hover:scale-110 transition-transform duration-300`}>
                         <service.icon className="h-8 w-8 text-white" />
                       </div>
-                      <CardTitle className="text-xl text-black group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-[#FF7043] group-hover:to-[#FFAD91] group-hover:bg-clip-text transition-all duration-300">
+                      <CardTitle className="text-xl text-[#2B2B2B] group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-[#F45B2A] group-hover:to-[#FF7A4D] group-hover:bg-clip-text transition-all duration-300">
                         {service.title}
                       </CardTitle>
-                      <CardDescription className="text-gray-600 text-center">
+                      <CardDescription className="text-[#6E6E6E] text-center">
                         {service.description}
                       </CardDescription>
                     </CardHeader>
                   </AccordionTrigger>
                   <AccordionContent className="px-6 pb-6">
-                    <div className="text-gray-700 text-sm leading-relaxed">
+                    <div className="text-[#6E6E6E] text-sm leading-relaxed">
                       {service.details}
                     </div>
                   </AccordionContent>
@@ -158,28 +158,28 @@ const ServicesSection = () => {
 
         {/* Data Recovery Services */}
         <div className="mb-16">
-          <h3 className="text-3xl font-bold text-black mb-8 text-center">
+          <h3 className="text-3xl font-bold text-[#2B2B2B] mb-8 text-center">
             Data Recovery Services
           </h3>
           <Accordion type="single" collapsible className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {dataRecoveryServices.map((service, index) => (
               <AccordionItem key={index} value={`recovery-${index}`} className="border-0">
-                <Card className="group hover:shadow-2xl transition-all duration-500 border-0 bg-white/90 backdrop-blur-sm hover:border-[#FF7043]/20 hover:-translate-y-2 animate-fade-in h-full" style={{animationDelay: `${index * 0.1 + 0.6}s`}}>
+                <Card className="group hover:shadow-2xl transition-all duration-500 border-0 glass-card backdrop-blur-md bg-white/80 hover:bg-white/90 hover:border-[#F45B2A]/20 hover:-translate-y-2 animate-fade-in h-full" style={{animationDelay: `${index * 0.1 + 0.6}s`}}>
                   <AccordionTrigger className="hover:no-underline p-0 border-0">
                     <CardHeader className="text-center w-full">
                       <div className={`mx-auto mb-4 p-3 rounded-xl bg-gradient-to-br ${service.gradient} shadow-lg group-hover:scale-110 transition-transform duration-300`}>
                         <service.icon className="h-6 w-6 text-white" />
                       </div>
-                      <CardTitle className="text-lg text-black group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-[#FF7043] group-hover:to-[#FFAD91] group-hover:bg-clip-text transition-all duration-300">
+                      <CardTitle className="text-lg text-[#2B2B2B] group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-[#F45B2A] group-hover:to-[#FF7A4D] group-hover:bg-clip-text transition-all duration-300">
                         {service.title}
                       </CardTitle>
-                      <CardDescription className="text-gray-600 text-center text-sm">
+                      <CardDescription className="text-[#6E6E6E] text-center text-sm">
                         {service.description}
                       </CardDescription>
                     </CardHeader>
                   </AccordionTrigger>
                   <AccordionContent className="px-6 pb-6">
-                    <div className="text-gray-700 text-sm leading-relaxed">
+                    <div className="text-[#6E6E6E] text-sm leading-relaxed">
                       {service.details}
                     </div>
                   </AccordionContent>
@@ -191,28 +191,28 @@ const ServicesSection = () => {
 
         {/* Additional Services */}
         <div>
-          <h3 className="text-3xl font-bold text-black mb-8 text-center">
+          <h3 className="text-3xl font-bold text-[#2B2B2B] mb-8 text-center">
             Additional Services
           </h3>
           <Accordion type="single" collapsible className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             {additionalServices.map((service, index) => (
               <AccordionItem key={index} value={`additional-${index}`} className="border-0">
-                <Card className="group hover:shadow-2xl transition-all duration-500 border-0 bg-white/90 backdrop-blur-sm hover:border-[#FF7043]/20 hover:-translate-y-2 animate-fade-in h-full" style={{animationDelay: `${index * 0.1 + 1}s`}}>
+                <Card className="group hover:shadow-2xl transition-all duration-500 border-0 glass-card backdrop-blur-md bg-white/80 hover:bg-white/90 hover:border-[#F45B2A]/20 hover:-translate-y-2 animate-fade-in h-full" style={{animationDelay: `${index * 0.1 + 1}s`}}>
                   <AccordionTrigger className="hover:no-underline p-0 border-0">
                     <CardHeader className="text-center w-full">
                       <div className={`mx-auto mb-4 p-4 rounded-2xl bg-gradient-to-br ${service.gradient} shadow-lg group-hover:scale-110 transition-transform duration-300`}>
                         <service.icon className="h-8 w-8 text-white" />
                       </div>
-                      <CardTitle className="text-xl text-black group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-[#FF7043] group-hover:to-[#FFAD91] group-hover:bg-clip-text transition-all duration-300">
+                      <CardTitle className="text-xl text-[#2B2B2B] group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-[#F45B2A] group-hover:to-[#FF7A4D] group-hover:bg-clip-text transition-all duration-300">
                         {service.title}
                       </CardTitle>
-                      <CardDescription className="text-gray-600 text-center">
+                      <CardDescription className="text-[#6E6E6E] text-center">
                         {service.description}
                       </CardDescription>
                     </CardHeader>
                   </AccordionTrigger>
                   <AccordionContent className="px-6 pb-6">
-                    <div className="text-gray-700 text-sm leading-relaxed">
+                    <div className="text-[#6E6E6E] text-sm leading-relaxed">
                       {service.details}
                     </div>
                   </AccordionContent>
