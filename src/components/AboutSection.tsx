@@ -35,11 +35,11 @@ const AboutSection = () => {
   ];
 
   return (
-    <section id="about" className="py-20 bg-white">
+    <section id="about" className="py-20 bg-gradient-to-b from-[#FFF8F6] to-[#FAF5F0]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            About <span className="text-blue-600">GCFI</span>
+          <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">
+            About <span className="bg-gradient-to-r from-[#FF7043] to-[#FFAD91] bg-clip-text text-transparent">GCFI</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-4xl mx-auto">
             We are a leading ISO 9001:2015 & ISO/IEC 27037:2012 certified provider of advanced cyber forensic services, 
@@ -50,14 +50,14 @@ const AboutSection = () => {
         <div className="grid lg:grid-cols-2 gap-12 mb-16">
           {/* Mission */}
           <div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
-              <Target className="h-6 w-6 text-blue-600 mr-2" />
+            <h3 className="text-2xl font-bold text-black mb-6 flex items-center">
+              <Target className="h-6 w-6 text-[#FF7043] mr-2" />
               Our Mission
             </h3>
             <div className="space-y-4">
               {missions.map((mission, index) => (
                 <div key={index} className="flex items-start space-x-3">
-                  <CheckCircle className="h-6 w-6 text-blue-600 mt-1 flex-shrink-0" />
+                  <CheckCircle className="h-6 w-6 text-[#FF7043] mt-1 flex-shrink-0" />
                   <p className="text-gray-600">{mission}</p>
                 </div>
               ))}
@@ -66,14 +66,14 @@ const AboutSection = () => {
 
           {/* Why Choose Us */}
           <div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
-              <Award className="h-6 w-6 text-blue-600 mr-2" />
+            <h3 className="text-2xl font-bold text-black mb-6 flex items-center">
+              <Award className="h-6 w-6 text-[#FF7043] mr-2" />
               Why Choose Us
             </h3>
             <div className="space-y-4">
               {whyChooseUs.map((reason, index) => (
                 <div key={index} className="flex items-start space-x-3">
-                  <CheckCircle className="h-6 w-6 text-blue-600 mt-1 flex-shrink-0" />
+                  <CheckCircle className="h-6 w-6 text-[#FF7043] mt-1 flex-shrink-0" />
                   <p className="text-gray-600">{reason}</p>
                 </div>
               ))}
@@ -83,17 +83,17 @@ const AboutSection = () => {
 
         {/* Expertise */}
         <div>
-          <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">
+          <h3 className="text-2xl font-bold text-black mb-8 text-center">
             Our Expertise
           </h3>
           <div className="grid md:grid-cols-3 gap-6">
             {expertise.map((item, index) => (
-              <Card key={index} className="text-center hover:shadow-lg transition-shadow duration-300">
+              <Card key={index} className="text-center hover:shadow-xl transition-all duration-300 border-0 bg-white/90 backdrop-blur-sm hover:-translate-y-1 animate-fade-in" style={{animationDelay: `${index * 0.1}s`}}>
                 <CardContent className="p-6">
-                  <div className="mx-auto mb-4 p-3 bg-blue-100 rounded-full w-fit">
-                    <item.icon className="h-8 w-8 text-blue-600" />
+                  <div className="mx-auto mb-4 p-3 bg-gradient-to-r from-[#FF7043] to-[#FFAD91] rounded-full w-fit shadow-lg">
+                    <item.icon className="h-8 w-8 text-white" />
                   </div>
-                  <h4 className="text-xl font-semibold text-gray-900 mb-3">{item.title}</h4>
+                  <h4 className="text-xl font-semibold text-black mb-3">{item.title}</h4>
                   <p className="text-gray-600">{item.description}</p>
                 </CardContent>
               </Card>
