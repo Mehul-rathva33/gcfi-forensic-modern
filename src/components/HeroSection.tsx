@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Shield, Lock, Search, Zap, Eye, Users } from 'lucide-react';
@@ -42,18 +41,14 @@ const HeroSection = () => {
                 ISO Certified Cyber Forensics Expert
               </div>
               
-              {/* Main Heading */}
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-[#2B2B2B] leading-tight">
-                <span className="bg-gradient-to-r from-[#F45B2A] to-[#FF7A4D] bg-clip-text text-transparent">
-                  Gujarat Cyber
-                </span>
-                <br />
-                <span className="text-[#2B2B2B]">Forensic &</span>
-                <br />
-                <span className="bg-gradient-to-r from-[#FF7A4D] to-[#F45B2A] bg-clip-text text-transparent">
-                  Investigations
-                </span>
-              </h1>
+              {/* Logo */}
+              <div className="flex justify-center mb-8">
+                <img 
+                  src="/lovable-uploads/b273aa45-a65b-4dcb-969a-5214228266a9.png" 
+                  alt="Gujarat Cyber Forensics & Investigations Logo" 
+                  className="h-32 w-auto object-contain drop-shadow-2xl shadow-2xl filter brightness-110 hover:scale-105 transition-all duration-300"
+                />
+              </div>
               
               {/* New Subtitle */}
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold bg-gradient-to-r from-[#F45B2A] via-[#FF7A4D] to-[#F45B2A] bg-clip-text text-transparent animate-pulse leading-tight tracking-wide">
