@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Shield, Phone, Mail, MapPin, Linkedin, Twitter } from 'lucide-react';
+import { Phone, Mail, MapPin, Linkedin, Twitter } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -9,8 +9,12 @@ const Footer = () => {
         <div className="grid md:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="col-span-1">
-            <div className="flex items-center space-x-2 mb-4">
-              <Shield className="h-8 w-8 text-[#F45B2A]" />
+            <div className="flex items-center space-x-3 mb-4">
+              <img 
+                src="/lovable-uploads/c56a5893-9228-4ccc-b517-b813381f0d4f.png" 
+                alt="GCFI Logo" 
+                className="h-8 w-8 object-contain"
+              />
               <span className="text-xl font-bold text-[#2B2B2B]">GCFI</span>
             </div>
             <p className="text-[#6E6E6E] mb-4">

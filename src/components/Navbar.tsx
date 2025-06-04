@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Shield } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -31,9 +31,13 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <div className="flex items-center space-x-2 group">
-            <div className="p-2 bg-gradient-to-r from-[#F45B2A] to-[#FF7A4D] rounded-lg shadow-lg group-hover:shadow-[#F45B2A]/25 transition-all duration-300 group-hover:scale-110">
-              <Shield className="h-6 w-6 text-white" />
+          <div className="flex items-center space-x-3 group">
+            <div className="transition-all duration-300 group-hover:scale-110">
+              <img 
+                src="/lovable-uploads/c56a5893-9228-4ccc-b517-b813381f0d4f.png" 
+                alt="GCFI Logo" 
+                className="h-10 w-10 object-contain"
+              />
             </div>
             <span className="text-xl font-bold text-[#2B2B2B]">
               GCFI
