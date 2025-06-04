@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Shield, Lock, Search, Zap, Eye, Users } from 'lucide-react';
@@ -46,13 +47,16 @@ const HeroSection = () => {
                 <img 
                   src="/lovable-uploads/b273aa45-a65b-4dcb-969a-5214228266a9.png" 
                   alt="Gujarat Cyber Forensics & Investigations Logo" 
-                  className="h-32 w-auto object-contain drop-shadow-2xl shadow-2xl filter brightness-110 hover:scale-105 transition-all duration-300"
+                  className="h-48 w-auto object-contain hover:scale-105 transition-all duration-300"
                 />
               </div>
               
-              {/* New Subtitle */}
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold bg-gradient-to-r from-[#F45B2A] via-[#FF7A4D] to-[#F45B2A] bg-clip-text text-transparent animate-pulse leading-tight tracking-wide">
-                UNLOCK THE TRUTH OF THE DIGITAL WORLD
+              {/* Subtitle */}
+              <h2 className="text-xl md:text-2xl lg:text-3xl font-bold bg-gradient-to-r from-[#F45B2A] via-[#FF7A4D] to-[#F45B2A] bg-clip-text text-transparent leading-tight tracking-wide relative">
+                <span className="relative z-10 animate-pulse">
+                  UNLOCK THE TRUTH OF THE DIGITAL WORLD
+                </span>
+                <div className="absolute inset-0 bg-gradient-to-r from-[#F45B2A]/20 via-[#FF7A4D]/20 to-[#F45B2A]/20 blur-lg -z-10 animate-pulse"></div>
               </h2>
             </div>
 
