@@ -55,12 +55,10 @@ const HeroSection = () => {
                 </span>
               </h1>
               
-              {/* Subtitle */}
-              <p className="text-xl text-[#6E6E6E] max-w-3xl mx-auto leading-relaxed">
-                Uncover digital truth with our advanced cyber forensic solutions. 
-                We investigate, analyze, and secure your digital world against evolving cyber threats 
-                with precision and expertise.
-              </p>
+              {/* New Subtitle */}
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold bg-gradient-to-r from-[#F45B2A] via-[#FF7A4D] to-[#F45B2A] bg-clip-text text-transparent animate-pulse leading-tight tracking-wide">
+                UNLOCK THE TRUTH OF THE DIGITAL WORLD
+              </h2>
             </div>
 
             {/* Statistics Cards */}
