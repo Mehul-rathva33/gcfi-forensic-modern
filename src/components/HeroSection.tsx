@@ -51,12 +51,14 @@ const HeroSection = () => {
                 />
               </div>
               
-              {/* Subtitle */}
-              <h2 className="text-xl md:text-2xl lg:text-3xl font-bold bg-gradient-to-r from-[#F45B2A] via-[#FF7A4D] to-[#F45B2A] bg-clip-text text-transparent leading-tight tracking-wide relative">
-                <span className="relative z-10 animate-pulse">
-                  UNLOCK THE TRUTH OF THE DIGITAL WORLD
+              {/* Subtitle with enhanced visibility */}
+              <h2 className="text-xl md:text-2xl lg:text-3xl font-bold leading-tight tracking-wide relative">
+                <span className="relative z-20 bg-white/90 px-6 py-3 rounded-lg backdrop-blur-sm border border-[#F45B2A]/30 shadow-lg">
+                  <span className="bg-gradient-to-r from-[#F45B2A] via-[#FF7A4D] to-[#F45B2A] bg-clip-text text-transparent font-extrabold animate-pulse">
+                    UNLOCK THE TRUTH OF THE DIGITAL WORLD
+                  </span>
                 </span>
-                <div className="absolute inset-0 bg-gradient-to-r from-[#F45B2A]/20 via-[#FF7A4D]/20 to-[#F45B2A]/20 blur-lg -z-10 animate-pulse"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-[#F45B2A]/20 via-[#FF7A4D]/20 to-[#F45B2A]/20 blur-xl -z-10 animate-pulse"></div>
               </h2>
             </div>
 
