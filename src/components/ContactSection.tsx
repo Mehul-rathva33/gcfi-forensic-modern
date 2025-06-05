@@ -26,7 +26,8 @@ const ContactSection = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     
-    // Create mailto link with form data
+    // Create mailto link with both email addresses
+    const emails = 'vs@cdfii.in,mehumehul9838@gmail.com';
     const subject = encodeURIComponent(formData.subject);
     const body = encodeURIComponent(
       `Name: ${formData.name}\n` +
@@ -35,7 +36,7 @@ const ContactSection = () => {
       `Message:\n${formData.message}`
     );
     
-    window.location.href = `mailto:vs@cdfii.in?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:${emails}?subject=${subject}&body=${body}`;
     
     toast({
       title: "Email Client Opened",
@@ -66,7 +67,7 @@ const ContactSection = () => {
     {
       icon: Mail,
       title: 'Email',
-      details: ['vs@cdfii.in', 'support@gcfi.com'],
+      details: ['vs@cdfii.in', 'mehumehul9838@gmail.com'],
       color: 'bg-[#F45B2A]'
     }
   ];
