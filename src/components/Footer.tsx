@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Phone, Mail, MapPin, Linkedin, Twitter } from 'lucide-react';
+import { Phone, Mail, MapPin } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -20,14 +20,6 @@ const Footer = () => {
             <p className="text-[#6E6E6E] mb-4">
               Leading provider of advanced cyber forensic services, protecting digital assets worldwide.
             </p>
-            <div className="flex space-x-4">
-              <a href="#" className="text-[#6E6E6E] hover:text-[#F45B2A] transition-colors">
-                <Linkedin className="h-5 w-5" />
-              </a>
-              <a href="#" className="text-[#6E6E6E] hover:text-[#F45B2A] transition-colors">
-                <Twitter className="h-5 w-5" />
-              </a>
-            </div>
           </div>
 
           {/* Services */}
