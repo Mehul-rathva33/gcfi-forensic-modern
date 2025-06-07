@@ -27,7 +27,7 @@ const ContactSection = () => {
     e.preventDefault();
     
     // Create mailto link with both email addresses
-    const emails = 'vs@cdfii.in';
+    const emails = 'vs@gcfi.in';
     const subject = encodeURIComponent(formData.subject);
     const body = encodeURIComponent(
       `Name: ${formData.name}\n` +
@@ -67,7 +67,7 @@ const ContactSection = () => {
     {
       icon: Mail,
       title: 'Email',
-      details: ['vs@cdfii.in'],
+      details: ['vs@gcfi.in'],
       color: 'bg-[#F45B2A]'
     }
   ];
