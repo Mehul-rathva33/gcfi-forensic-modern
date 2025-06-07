@@ -27,7 +27,7 @@ const ContactSection = () => {
     e.preventDefault();
     
     // Create mailto link with both email addresses
-    const emails = 'vs@cdfii.in,mehumehul9838@gmail.com';
+    const emails = 'vs@cdfii.in';
     const subject = encodeURIComponent(formData.subject);
     const body = encodeURIComponent(
       `Name: ${formData.name}\n` +
