@@ -67,7 +67,7 @@ const ContactSection = () => {
     {
       icon: Mail,
       title: 'Email',
-      details: ['vs@cdfii.in', 'mehumehul9838@gmail.com'],
+      details: ['vs@cdfii.in'],
       color: 'bg-[#F45B2A]'
     }
   ];
